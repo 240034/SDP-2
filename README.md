@@ -9,7 +9,7 @@ The factory Method pattern delegates the creation of objects to subclasses.
 interface Book {
     void printInfo();
 }
-
+```java
 class Ebook implements Book {
     @Override
     public void printInfo() {
@@ -52,10 +52,10 @@ class AudioBookFactory implements BookFactory{
         return new AudioBook();
     }
 }
+```
 
-
-Client Code:
-
+# Client Code:
+```java 
 public class FactoryMethod {
     public static void main(String[] args) {
         BookFactory eBookFactory = new EBookFactory();
@@ -71,15 +71,16 @@ public class FactoryMethod {
         audio.printInfo();
     }
 }
-
-Output: 
+```
+# Output:
+```java
 Ebook
 PrintedBook
 AudioBook
-
+```
 
 # Abstract Factory
-
+```java
 The Abstact Factory pattern creates entire families of related objects:
 interface Book {
     void printInfo();
@@ -134,8 +135,9 @@ class ModernLibraryFactory implements LibraryFactory {
         return new ModernCover();
     }
 }
-
-Client code:
+```
+# Client code:
+```java
 public class AbstractFactory {
     public static void main(String[] args) {
         LibraryFactory classicFactory = new ClassicLibraryFactory();
@@ -151,13 +153,14 @@ public class AbstractFactory {
         modernBook.printInfo();
         modernCover.printCover();
     }}
-
-Output:
+```
+# Output:
+```java
 Crime and Punishment
 Classic Leather Cover
 Modern Glossy Cover
 Modern Glossy Cover
-
+```
 # Conclusion:
 
 By implementing Factory Method and Abstract Factory, I:
